@@ -88,7 +88,11 @@
 			<version>7.0</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>com.csc.integral.libs</groupId>
+			<artifactId>sqljdbc</artifactId>
+			<version>4.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>

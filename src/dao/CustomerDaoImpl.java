@@ -39,7 +39,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public List<Customer> listCustomers() {
 		Session session = getSessionFactory().openSession();
-        List<Customer> list = session.createQuery("from CUSTOMERS").list();
+        List<Customer> list = session.createQuery("from Customer").list();
         session.close();
         return list;
 	}

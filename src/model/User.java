@@ -1,14 +1,14 @@
 package model;
 
 import javax.persistence.Column;
+import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
+
 
 @Entity
-@Table(appliesTo="USERS")
+@Table(name="USERS")
 public class User {
 	private int id;
 	private String username;

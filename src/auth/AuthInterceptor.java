@@ -9,10 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-
+@Repository
 public class AuthInterceptor extends HandlerInterceptorAdapter {
 	/* Get actual class name to be printed on */
 	//private static org.apache.log4j.Logger log = Logger.getLogger(AuthInterceptor.class);

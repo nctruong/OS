@@ -17,14 +17,22 @@
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 		<property name="url"
 			value="jdbc:sqlserver://localhost:1433;databaseName=OnlineShopping;" />
-		<property name="username" value="tnguyen395" />
+		<property name="username" value="truong" />
 		<property name="password" value="Or@cle11" />
 	</bean>
 	<!-- Hibernate session factory -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		
+		<property name="packagesToScan">
+		<list>
+			<value>auth</value>
+			<value>model</value>
+			<value>dao</value>
+			<value>controller</value>
+			<value>service</value>
+		</list>
+		</property>
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">
@@ -38,7 +46,7 @@
 			</props>
 		</property>
 	</bean>
-	<context:component-scan base-package="auth,controller,dao,service" />
+	<context:component-scan base-package="auth,model,controller,dao,service" />
 	
 	<mvc:annotation-driven />
 	<!-- Auth -->

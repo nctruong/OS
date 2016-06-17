@@ -1,14 +1,15 @@
 package model;
 
-import java.util.List;
+//import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
+
 
 @Entity
-@Table(appliesTo = "CUSTOMERS")
+@Table(name = "CUSTOMERS")
 public class Customer extends User {
 	private String name;
 	private String address;
